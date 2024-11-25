@@ -5,14 +5,13 @@ class Solution:
         ind=0
         n=len(nums)
 
-        for i in range(n):
+        for i in range(n): #O(n)
             k=nums[i]
-            if k not in di or di[k]<2:
-                nums[ind]=k
+            if k not in di or di[k]<2:  #O(1)
+                nums[ind]=k 
                 ind+=1
-                di[k] = di.get(k,0)+1
+                di[k] = di.get(k,0)+1 
 
-        di.clear()
         return ind
 
 
