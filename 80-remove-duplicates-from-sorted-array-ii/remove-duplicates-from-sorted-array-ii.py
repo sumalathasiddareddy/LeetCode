@@ -12,6 +12,7 @@ class Solution:
                 ind+=1
                 di[k] = di.get(k,0)+1
 
+        di.clear()
         return ind
 
 
