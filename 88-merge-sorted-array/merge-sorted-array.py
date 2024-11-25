@@ -3,11 +3,9 @@ class Solution:
         """
         Do not return anything, modify nums1 in-place instead.
         """
-        for i in range(n):
-           nums1[m]=nums2[i]
-           m+=1
+        nums1[m:]=nums2
+        nums1.sort() #O((m+n)log(m+n))
         
-        nums1.sort()
 
         
             
