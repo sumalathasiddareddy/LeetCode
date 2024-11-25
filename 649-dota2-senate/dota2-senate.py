@@ -2,7 +2,6 @@ class Solution:
     def predictPartyVictory(self, senate: str) -> str:
        
         n= len(senate)
-
         rInd = deque()
         dInd = deque()
 
