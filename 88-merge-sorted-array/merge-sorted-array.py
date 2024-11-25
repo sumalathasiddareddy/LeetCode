@@ -3,7 +3,6 @@ class Solution:
         """
         Do not return anything, modify nums1 in-place instead.
         """
-        nums3=[]
         i,j,k=m-1,n-1,m+n-1
         
         while i>=0 and j>=0:
