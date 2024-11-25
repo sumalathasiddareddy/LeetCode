@@ -5,7 +5,6 @@ class Solution:
         """
         nums3=[]
         i,j,k=m-1,n-1,m+n-1
-
         
         while i>=0 and j>=0:
             if nums1[i]>nums2[j]:
