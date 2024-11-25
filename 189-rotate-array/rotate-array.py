@@ -6,9 +6,13 @@ class Solution:
 
         n = len(nums)
         for i in range(k):#O(k)
-            k=nums[-1] 
-            nums.pop(n-1)  #O(1)
-            nums.insert(0,k) #O(n)
+            m=nums[-1] 
+            nums.pop()  #O(1)
+            nums.insert(0,m) #O(n)
         
         #Overall: O(n*k)
+        
+        return
+
+
         
