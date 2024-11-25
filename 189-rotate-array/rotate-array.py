@@ -5,8 +5,9 @@ class Solution:
         """
 
         n = len(nums)
+        
         for i in range(k):#O(k)
-            m=nums[-1] 
+            m=nums[-1]
             nums.pop()  #O(1)
             nums.insert(0,m) #O(n)
         
