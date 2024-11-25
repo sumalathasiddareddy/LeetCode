@@ -6,10 +6,11 @@ class Solution:
         n=len(nums)
 
         for i in range(n):
-            if nums[i] not in di or di[nums[i]]<2:
-                nums[ind]=nums[i]
+            k=nums[i]
+            if k not in di or di[k]<2:
+                nums[ind]=k
                 ind+=1
-                di[nums[i]] = di.get(nums[i],0)+1
+                di[k] = di.get(k,0)+1
 
         return ind
 
