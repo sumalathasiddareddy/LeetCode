@@ -6,12 +6,11 @@ class Solution:
         totalProfit=0
 
         for i in range(n):
-            currPrice = prices[i]
-            if currPrice < minPrice:
-                minPrice = currPrice
+            if prices[i] < minPrice:
+                minPrice = prices[i]
             else:
-                totalProfit += currPrice-minPrice
-                minPrice = currPrice
+                totalProfit += prices[i]-minPrice
+                minPrice = prices[i]
 
         return totalProfit
 
