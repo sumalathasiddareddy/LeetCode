@@ -3,7 +3,6 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-
         n = len(nums)
         
         for i in range(k):#O(k)
@@ -14,6 +13,3 @@ class Solution:
         #Overall: O(n*k)
         
         return
-
-
-        
