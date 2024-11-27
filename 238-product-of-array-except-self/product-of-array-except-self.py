@@ -12,11 +12,7 @@ class Solution:
         
         temp=1
         for j in range(n-1,-1,-1):
-            if j==0:
-                preProd=1
-            else:
-                preProd=prefix[j]
-            answer[j] = preProd*temp
+            answer[j] = prefix[j]*temp
             temp*=nums[j]
 
         return answer
