@@ -7,13 +7,15 @@ class Solution:
 
         for i in range(n):
             num += d[s[i]]
-            if i>0 and s[i] in ("V","X"):
+            if i==0:
+                continue
+            if s[i] in ("V","X"):
                 if s[i-1] == "I":
                     num = num-2
-            elif i>0 and s[i] in ("L","C"):
+            elif s[i] in ("L","C"):
                 if s[i-1] == "X":
                     num = num-20
-            elif i>0 and s[i] in ("D","M"):
+            elif s[i] in ("D","M"):
                 if s[i-1] == "C":
                     num = num-200
            
