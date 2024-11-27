@@ -1,12 +1,12 @@
 class RandomizedSet:
 
     def __init__(self):
-        self.RandomizedSet = []
+        self.RandomizedSet = set()
         
 
     def insert(self, val: int) -> bool:
         if val not in self.RandomizedSet:
-            self.RandomizedSet.append(val)
+            self.RandomizedSet.add(val)
             return True
         else:
             return False
@@ -21,7 +21,7 @@ class RandomizedSet:
         
 
     def getRandom(self) -> int:
-        return random.choice(self.RandomizedSet)
+        return random.choice(list(self.RandomizedSet))
         #return self.RandomizedSet[random.randint(0,len(self.RandomizedSet)-1)]
         
 
