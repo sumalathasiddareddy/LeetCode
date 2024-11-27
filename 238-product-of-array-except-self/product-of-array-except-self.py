@@ -6,12 +6,11 @@ class Solution:
         prefix=[1]*n
              
         prefix[0]=1
-               
-        for i in range(1,n):
+        for i in range(1,n):#O(n)
             prefix[i] = prefix[i-1]*nums[i-1]
         
         temp=1
-        for j in range(n-1,-1,-1):
+        for j in range(n-1,-1,-1):#O(n)
             answer[j] = prefix[j]*temp
             temp*=nums[j]
 
