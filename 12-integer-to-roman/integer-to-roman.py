@@ -1,6 +1,7 @@
 class Solution:
     def intToRoman(self, num: int) -> str:
-        
+
+       '''My solution ->
         d={4:"IV",9:"IX" ,40:"XL",90:"XC",400:"CD", 900:"CM",1:"I",5:"V",10:"X",50:"L",100:"C",500:"D",1000:"M"}
 
         romanStr=""
@@ -42,4 +43,11 @@ class Solution:
                 romanStr = temp + romanStr
             placeValue *=10                
             
-        return romanStr
+        return romanStr '''
+
+       M = ["", "M", "MM", "MMM"]
+       C = ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"]
+       X = ["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"]
+       I = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"]
+
+       return M[num//1000] + C[(num%1000)//100] + X[((num%1000)%100)//10] + I[((num%1000)%100)%10]
