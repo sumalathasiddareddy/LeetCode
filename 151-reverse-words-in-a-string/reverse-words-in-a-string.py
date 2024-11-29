@@ -8,7 +8,7 @@ class Solution:
 
         #solution without split()
         s=s.strip()
-        news=""
+        stack=[]
         word=''
         i=0
 
@@ -17,11 +17,14 @@ class Solution:
                 while i<len(s) and s[i]!=" ":
                     word+=s[i]
                     i+=1
-                news= word + " " + news
+                stack.append(word)
                 word=""
             i+=1
-
-        return news.strip()
+        s=""
+        while stack:
+            s += stack.pop() + " "
+        
+        return s.strip()
 
 
 
