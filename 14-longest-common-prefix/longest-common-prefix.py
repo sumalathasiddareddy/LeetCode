@@ -10,11 +10,8 @@ class Solution:
                 char= strs[0][j]
                 for i in range(n1):
                     if j>=len(strs[i]) or strs[i][j] !=char:
-                        end=True
-                        break
-                if not end:
-                    prefix+=char
-                else:
-                    break
-            
+                        return prefix
+                prefix+=char
+                
             return prefix
+            
