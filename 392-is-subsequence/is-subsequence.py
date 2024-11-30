@@ -11,8 +11,6 @@ class Solution:
                 if s[i] == t[j]:
                     ind=j+1
                     break
-                elif j == n - 1:
-                    return False
                 j+=1
             else:
                 return False
