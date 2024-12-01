@@ -1,6 +1,26 @@
 class Solution:
     def convert(self, s: str, numRows: int) -> str:
         
+        rows=[""]*numRows
+        step,index=0,0
+
+        if numRows<=1:
+            return s
+
+        for char in s:
+            rows[index]+=char
+            if index==0:
+                step=1
+            elif index==numRows-1:
+                step=-1
+            index+=step
+
+        return "".join(rows)
+
+        
+        
+        
+        '''
         columns=[]
         rows=[]
         n=len(s)
@@ -34,4 +54,5 @@ class Solution:
             rows.append([columns[j][i] for j in range(len(columns)) if i<len(columns[j]) and columns[j][i]!=" "])
 
         return ''.join([''.join(row) for row in rows])
+        '''
 
