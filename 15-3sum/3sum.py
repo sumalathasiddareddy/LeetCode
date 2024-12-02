@@ -5,6 +5,7 @@ class Solution:
         nums.sort()
         res=[]
         n=len(nums)
+
         for i in range(n):
             if i>0 and nums[i]==nums[i-1]:
                 continue
@@ -24,7 +25,6 @@ class Solution:
                     k-=1
                     while nums[k]==nums[k+1] and k>j:
                         k-=1
-
         return res
         
 
