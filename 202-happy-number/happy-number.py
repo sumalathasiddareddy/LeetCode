@@ -1,9 +1,10 @@
 class Solution:
     def isHappy(self, n: int) -> bool:
 
-        num=[]
+        num = []
         temp = 0
-        Sum=0
+        Sum = 0
+
         while True:
             prevSum = Sum
             Sum = 0
