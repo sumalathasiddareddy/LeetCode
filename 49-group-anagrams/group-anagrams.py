@@ -5,7 +5,7 @@ class Solution:
        n=len(strs)
        
        for i in range(n):
-            s=str(sorted(strs[i]))
+            s=''.join(sorted(strs[i]))
             d[s].append(strs[i])
        return list(d.values())
         
