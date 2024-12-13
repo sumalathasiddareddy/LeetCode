@@ -5,15 +5,10 @@ class Solution:
         n=len(nums)
 
         for i in range(n):
+            if nums[i] in d:
+                if abs(d[nums[i]][-1] - i)<=k:
+                   return True
             d[nums[i]].append(i)
-
-        for indices in d.values():
-            diff=0
-            for i in range(len(indices)-1):
-                diff= abs(indices[i]-indices[i+1])
-                if diff<=k:
-                    return True
-
         return False
 
         
