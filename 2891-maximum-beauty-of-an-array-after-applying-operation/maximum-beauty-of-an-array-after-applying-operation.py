@@ -6,8 +6,7 @@ class Solution:
             maxCount=1
             start=0
 
-           
-            
+                      
             for i in range(1,n):
                 while nums[i]-nums[start]>(k*2):
                     start+=1
