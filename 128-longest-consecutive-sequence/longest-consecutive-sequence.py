@@ -1,7 +1,6 @@
 class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
-
-        
+ 
         start,i,maxCount=0,0,0
         nums= list(set(nums))
         nums.sort()
@@ -13,6 +12,6 @@ class Solution:
             maxCount = max(maxCount,i-start)
             start=i
             i+=1
-        
+            
         return maxCount
        
