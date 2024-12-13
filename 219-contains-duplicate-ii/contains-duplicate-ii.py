@@ -6,7 +6,7 @@ class Solution:
 
         for i in range(n):
             if nums[i] in d:
-                if abs(d[nums[i]] - i)<=k:
+                if i-d[nums[i]] <=k:
                    return True
             d[nums[i]] = i
         return False
