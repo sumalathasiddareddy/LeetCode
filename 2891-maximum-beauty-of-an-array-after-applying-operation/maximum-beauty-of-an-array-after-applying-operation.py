@@ -3,11 +3,10 @@ class Solution:
 
             nums.sort()
             n=len(nums)
-            maxCount=0
+            maxCount=1
             start=0
 
-            if n==1:
-                return 1
+           
             
             for i in range(1,n):
                 while nums[i]-nums[start]>(k*2):
