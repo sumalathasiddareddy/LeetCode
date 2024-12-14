@@ -10,8 +10,6 @@ class Solution:
                 i+=1
             if start==i:
                 res.append(str(nums[i]))
-                if i==n-1:
-                    break            
             else:
                 res.append(str(nums[start])+"->"+str(nums[i]))
             i+=1
