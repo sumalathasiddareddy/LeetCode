@@ -1,19 +1,14 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
 
-        n=len(prices)
-        minPrice=sys.maxsize
-        totalProfit=0
-                
-        for i in range(n):
+        minPrice = sys.maxsize
+        maxProfit = 0
+
+        for i in range(len(prices)):
             if prices[i] < minPrice:
                 minPrice = prices[i]
-            else:
-                totalProfit += prices[i]-minPrice
-                minPrice = prices[i]
+                continue
+            maxProfit += prices[i] - minPrice
+            minPrice=prices[i]
 
-        return totalProfit
-       
-
-
-        
+        return maxProfit
