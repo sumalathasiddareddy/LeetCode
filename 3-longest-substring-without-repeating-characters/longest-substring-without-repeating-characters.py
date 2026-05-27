@@ -3,8 +3,7 @@ class Solution:
 
         n=len(s)
         substr=set()
-        ind=0
-        maxLength=0
+        ind,maxLength=0,0
 
         for i in range(n):
             if s[i] not in substr:
